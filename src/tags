@@ -1,0 +1,72 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.6	//
+BROADCAST	p2p-1.0.c	24;"	d	file:
+MAX_BUFFER_SIZE	p2p-1.0.c	20;"	d	file:
+MAX_PEER_NUM	p2p-1.0.c	22;"	d	file:
+PRIVATE	p2p-1.0.c	23;"	d	file:
+SALUTE	p2p-1.0.c	25;"	d	file:
+TOKEN_LEN	p2p-1.0.c	21;"	d	file:
+addr_len	p2p-1.0.c	/^	socklen_t addr_len;$/;"	m	struct:host_info	file:
+addr_len	p2p-1.0.c	/^	socklen_t addr_len;$/;"	m	struct:peer_info	file:
+all_tokens_handler	p2p-1.0.c	/^void all_tokens_handler() {$/;"	f
+bmc	p2p-1.0.c	/^int bmc; \/\/broadcast message count$/;"	v
+braodcast_message	p2p-1.0.c	/^struct braodcast_message {$/;"	s	file:
+broc_msg	p2p-1.0.c	/^} broc_msg[MAX_PEER_NUM];$/;"	v	typeref:struct:braodcast_message
+close_handler	p2p-1.0.c	/^void close_handler() {$/;"	f
+command	p2p-1.0.c	/^void command(const char *str) {$/;"	f
+compose_broadcast_msg	p2p-1.0.c	/^void compose_broadcast_msg(char* message, int type, char* token, uint32_t ip,$/;"	f
+compose_private_msg	p2p-1.0.c	/^void compose_private_msg(int type, int len, char* token, char* message) {$/;"	f
+compose_salute_msg	p2p-1.0.c	/^void compose_salute_msg(int type, char* message) {$/;"	f
+connect_handler	p2p-1.0.c	/^void connect_handler(const char *str) {$/;"	f
+connect_to_peer	p2p-1.0.c	/^int connect_to_peer(char* ip, int port) {$/;"	f
+extract_ip_port	p2p-1.0.c	/^void extract_ip_port(const char* line, char* ip, int& port) {$/;"	f
+forward_msg	p2p-1.0.c	/^void forward_msg(int msg_id, char* msg, int fd) {$/;"	f
+get_ip	p2p-1.0.c	/^void get_ip(char* host_ip) {$/;"	f
+get_msg_header	p2p-1.0.c	/^void get_msg_header(char* msg, int* id, int* type, int* len, char* payload) {$/;"	f
+host	p2p-1.0.c	/^} host;$/;"	v	typeref:struct:host_info
+host_info	p2p-1.0.c	/^struct host_info {$/;"	s	file:
+host_init	p2p-1.0.c	/^void host_init() {$/;"	f
+info_handler	p2p-1.0.c	/^void info_handler() {$/;"	f
+ip	p2p-1.0.c	/^	uint32_t ip;$/;"	m	struct:braodcast_message	file:
+is_dup_msg	p2p-1.0.c	/^int is_dup_msg(int msg_id, int bmc) {$/;"	f
+is_host	p2p-1.0.c	/^	int is_host;$/;"	m	struct:braodcast_message	file:
+main	p2p-1.0.c	/^int main(int ac, char* av[]) {$/;"	f
+max_fd	p2p-1.0.c	/^int max_fd;$/;"	v
+msg_id	p2p-1.0.c	/^	int msg_id;$/;"	m	struct:braodcast_message	file:
+name	p2p-1.0.c	/^	char name[MAX_BUFFER_SIZE];$/;"	m	struct:host_info	file:
+name	p2p-1.0.c	/^	char name[MAX_BUFFER_SIZE];$/;"	m	struct:peer_info	file:
+node_num	p2p-1.0.c	/^int node_num; \/\/total nodes number in the network, include host itself$/;"	v
+oops	p2p-1.0.c	26;"	d	file:
+peer	p2p-1.0.c	/^} peer[MAX_PEER_NUM];$/;"	v	typeref:struct:peer_info
+peer_info	p2p-1.0.c	/^struct peer_info {$/;"	s	file:
+peer_num	p2p-1.0.c	/^int peer_num; \/\/adjacent peer count$/;"	v
+pmc	p2p-1.0.c	/^int pmc; \/\/private message count$/;"	v
+read_fds	p2p-1.0.c	/^fd_set read_fds;$/;"	v
+ready_handler	p2p-1.0.c	/^void ready_handler() {$/;"	f
+receive_broadcast_msg	p2p-1.0.c	/^void receive_broadcast_msg(int msg_id, int fd, char *payload) {$/;"	f
+receive_private_msg	p2p-1.0.c	/^void receive_private_msg(int fd, char* init_token) {$/;"	f
+receive_salute_msg	p2p-1.0.c	/^void receive_salute_msg(int i, char* msg) {$/;"	f
+resetfd	p2p-1.0.c	/^void resetfd() {$/;"	f
+s_ip	p2p-1.0.c	/^	char s_ip[MAX_BUFFER_SIZE];$/;"	m	struct:braodcast_message	file:
+s_ip	p2p-1.0.c	/^	char s_ip[MAX_BUFFER_SIZE];$/;"	m	struct:host_info	file:
+s_ip	p2p-1.0.c	/^	char s_ip[MAX_BUFFER_SIZE];$/;"	m	struct:peer_info	file:
+salute_leader	p2p-1.0.c	/^void salute_leader() {$/;"	f
+save_broc_msg	p2p-1.0.c	/^void save_broc_msg(int is_host, int msg_id, char* token, uint32_t ip, uint16_t uport) {$/;"	f
+self_token	p2p-1.0.c	/^	char self_token[TOKEN_LEN + 1];$/;"	m	struct:host_info	file:
+self_token_handler	p2p-1.0.c	/^void self_token_handler() {$/;"	f
+send_broadcast_msg	p2p-1.0.c	/^void send_broadcast_msg(int msg_id) {$/;"	f
+show_conn_handle	p2p-1.0.c	/^void show_conn_handle() {$/;"	f
+tcp_addr	p2p-1.0.c	/^	struct sockaddr_in tcp_addr;$/;"	m	struct:host_info	typeref:struct:host_info::sockaddr_in	file:
+tcp_addr	p2p-1.0.c	/^	struct sockaddr_in tcp_addr;$/;"	m	struct:peer_info	typeref:struct:peer_info::sockaddr_in	file:
+tcp_fd	p2p-1.0.c	/^	int tcp_fd;$/;"	m	struct:host_info	file:
+tcp_fd	p2p-1.0.c	/^	int tcp_fd;$/;"	m	struct:peer_info	file:
+token	p2p-1.0.c	/^	char token[TOKEN_LEN + 1];$/;"	m	struct:braodcast_message	file:
+udp_addr	p2p-1.0.c	/^	struct sockaddr_in udp_addr;$/;"	m	struct:host_info	typeref:struct:host_info::sockaddr_in	file:
+udp_addr	p2p-1.0.c	/^	struct sockaddr_in udp_addr;$/;"	m	struct:peer_info	typeref:struct:peer_info::sockaddr_in	file:
+udp_fd	p2p-1.0.c	/^	int udp_fd;$/;"	m	struct:host_info	file:
+udp_port	p2p-1.0.c	/^	uint16_t udp_port;$/;"	m	struct:braodcast_message	file:
+var_handler	p2p-1.0.c	/^void var_handler() {$/;"	f
