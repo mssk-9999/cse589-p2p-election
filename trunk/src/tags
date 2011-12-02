@@ -49,7 +49,7 @@ read_fds	p2p-1.0.c	/^fd_set read_fds;$/;"	v
 ready_handler	p2p-1.0.c	/^void ready_handler() {$/;"	f
 receive_broadcast_msg	p2p-1.0.c	/^void receive_broadcast_msg(int msg_id, int fd, char *payload) {$/;"	f
 receive_private_msg	p2p-1.0.c	/^void receive_private_msg(int fd, char* init_token) {$/;"	f
-receive_salute_msg	p2p-1.0.c	/^void receive_salute_msg(int i, char* msg) {$/;"	f
+receive_salute_msg	p2p-1.0.c	/^void receive_salute_msg(struct sockaddr_in* from, char* msg) {$/;"	f
 resetfd	p2p-1.0.c	/^void resetfd() {$/;"	f
 s_ip	p2p-1.0.c	/^	char s_ip[MAX_BUFFER_SIZE];$/;"	m	struct:braodcast_message	file:
 s_ip	p2p-1.0.c	/^	char s_ip[MAX_BUFFER_SIZE];$/;"	m	struct:host_info	file:
