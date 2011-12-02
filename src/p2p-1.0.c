@@ -89,7 +89,7 @@ void get_ip(char* host_ip) {
 /*
  * extract ip and port from input string
  */
-void extract_ip_port(const char* line, char* ip, int& port) {
+void extract_ip_port(const char* line, char* ip, int* port) {
 	int i, p, q, w;
 	int slen;
 	char sport[MAX_BUFFER_SIZE];
@@ -110,7 +110,7 @@ void extract_ip_port(const char* line, char* ip, int& port) {
 	ip[q - p - 1] = '\0';
 	strncpy(sport, line + q + 1, w - q);
 	sport[w - q] = '\0';
-	port = atoi(sport);
+	*port = atoi(sport);
 }
 
 void info_handler() {
@@ -150,7 +150,7 @@ int connect_to_peer(char* ip, int port) {
 void connect_handler(const char *str) {
 	char ip[MAX_BUFFER_SIZE];
 	int port;
-	extract_ip_port(str, ip, port);
+	extract_ip_port(str, ip, &port);
 	if (connect_to_peer(ip, port) < 0) {
 		printf("connect to %s | %d failure\n", ip, port);
 	} else {
