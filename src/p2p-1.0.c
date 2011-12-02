@@ -450,7 +450,7 @@ void salute_leader() {
 	if (max == -1) {
 		printf("leader is me! my token is %s\n", host.self_token);
 	} else {
-		printf("press any key to salute the leader!\n");
+		printf("press ENTER to salute the leader!\n");
 		getchar();
 		inet_ntop(AF_INET, &broc_msg[max].ip, s_ip, INET_ADDRSTRLEN);
 		printf("leader is %s, token is %s\n", s_ip, broc_msg[max].token);
@@ -658,6 +658,9 @@ int main(int ac, char* av[]) {
 					}
 					inet_ntop(AF_INET, &peer[peer_num].tcp_addr.sin_addr, peer[peer_num].s_ip,
 							sizeof(peer[peer_num].s_ip));
+					getnameinfo((struct sockaddr*) &peer[peer_num].tcp_addr,
+							sizeof(peer[peer_num].tcp_addr), peer[peer_num].name,
+							sizeof(peer[peer_num].name), NULL, 0, 0);
 					printf("connected with %s | %d\n", peer[peer_num].s_ip, ntohs(
 							peer[peer_num].tcp_addr.sin_port));
 					peer_num++;
